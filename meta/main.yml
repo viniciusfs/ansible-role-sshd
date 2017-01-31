@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Vinícius Figueiredo
-  description: Installs and configures SSH daemon on CentOS/RHEL systems.
+  description: Installs and configures SSH daemon in CentOS/RHEL systems.
   license: MIT
 
   platforms:
