@@ -1,0 +1,26 @@
+---
+sshd_config_port: 22
+sshd_config_listen_address: 0.0.0.0
+sshd_config_protocol: 2
+sshd_config_syslog_facility: "AUTHPRIV"
+sshd_config_log_level: "INFO"
+sshd_config_privilege_separation: "yes"
+sshd_config_permit_empty_passwords: "no"
+sshd_config_ignore_rhosts: "yes"
+sshd_config_rsa_authentication: "yes"
+sshd_config_strict_mode: "yes"
+sshd_config_max_auth_tries: 3
+sshd_config_host_based_authentication: "no"
+sshd_config_allow_tcp_forwarding: "yes"
+sshd_config_x11_forwarding: "no"
+sshd_config_max_startups: 5
+sshd_config_tcp_keep_alive: "yes"
+sshd_config_password_authentication: "yes"
+sshd_config_pubkey_authentication: "yes"
+sshd_config_client_alive_interval: 900
+sshd_config_client_alive_count_max: 0
+sshd_config_banner: "/etc/issue.net"
+sshd_config_login_grace_time: 45
+sshd_config_permit_root_login: "yes"
+sshd_config_use_pam: "yes"
+sshd_config_use_dns: "no"
