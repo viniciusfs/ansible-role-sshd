@@ -84,8 +84,6 @@ MaxStartups {{ sshd_config_max_startups }}
 
 Banner {{ sshd_config_banner }}
 
-AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
 AuthorizedKeysCommandUser nobody
 
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
-
