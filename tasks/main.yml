@@ -1,23 +1,24 @@
 ---
-  - name: Install SSH packages
-    yum: >
-      name={{ item }}
-      state=installed
-    with_items:
-    - openssh
-    - openssh-server
-    - openssh-clients
+- name: Install SSH packages
+  yum: >
+    name={{ item }}
+    state=installed
+  with_items:
+  - openssh
+  - openssh-server
+  - openssh-clients
 
-  - name: Deploy new /etc/ssh/sshd_config file from template
-    template: >
-      src=sshd_config.tpl
-      dest=/etc/ssh/sshd_config
-      owner=root
-      group=root
-      mode=0400
+- name: Deploy new /etc/ssh/sshd_config file from template
+  template: >
+    src=sshd_config.j2
+    dest=/etc/ssh/sshd_config
+    owner=root
+    group=root
+    mode=0400
+  notify: restart_sshd
 
-  - name: Start and enable SSH daemon
-    service: >
-      name=sshd
-      state=started
-      enabled=yes
+- name: Start and enable SSH daemon
+  service: >
+    name=sshd
+    state=started
+    enabled=yes
